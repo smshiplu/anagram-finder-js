@@ -9,6 +9,7 @@ const searchFormEl = document.getElementById("searchForm");
 
 document.addEventListener('DOMContentLoaded', function() {
   searchFormEl.classList.remove('hidden');
+  document.body.classList.remove('hidden');
 });
 
 searchFormEl.addEventListener("submit", async e => {
