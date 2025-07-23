@@ -18,7 +18,7 @@ searchFormEl.addEventListener("submit", async e => {
       throw new Error("Enter a word!");
     }
 
-    const prompt = `Return all possible meaningful English-only anagrams of the word "${searchTerm}" in a comma-separated text only. The anagram words should be exactly ${searchTerm.length} characters long. If the anagram words don't consist of letters with '${searchTerm.split("").join(", ")},' or if the given word "${searchTerm}" is not a valid and meaningful English word that you cannot make any sense of or find any meaningful English anagrams for, or if you find only a word that is same word as "${searchTerm}", then return the word "Sorry" only. Except these instructions return nothing`;
+    const prompt = `Return all possible meaningful English-only anagrams of the word "${searchTerm}" in a comma-separated text only. The anagram words should be exactly ${searchTerm.length} characters long. If the comma separated text response contains any word that is same as ${searchTerm}", then exclude that word from the comma separated text. If the anagram words don't consist of letters with '${searchTerm.split("").join(", ")},' or if the given word "${searchTerm}" is not a valid and meaningful English word that you cannot make any sense of or don't find any meaningful English anagrams for, or if you find only a word that is same word as "${searchTerm}", then return the word "Sorry" only. Except these instructions return nothing`;
 
     const result = await getAIResponse(prompt);
 

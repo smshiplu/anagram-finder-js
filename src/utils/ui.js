@@ -98,6 +98,7 @@ function displayResult(searchTerm, resultMap) {
   resultEl.classList.remove("hidden");
 
   document.getElementById("main-word").innerText = searchTerm;
+  document.getElementById("anagram").innerText = resultMap.size > 1 ? `Anagrams(${resultMap.size})` : `Anagram(1)`;
   
   const mainWordValue = resultMap && resultMap.get(searchTerm).shift();  
 
