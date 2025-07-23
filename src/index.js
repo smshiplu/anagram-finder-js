@@ -7,6 +7,10 @@ import getAIResponse from  "./utils/ai.js";
 
 const searchFormEl = document.getElementById("searchForm");
 
+document.addEventListener('DOMContentLoaded', function() {
+  searchFormEl.classList.remove('hidden');
+});
+
 searchFormEl.addEventListener("submit", async e => {
   e.preventDefault();
 
@@ -66,6 +70,7 @@ searchFormEl.addEventListener("submit", async e => {
   e.target.reset();
 });
 
+ui.favicon();
 ui.bgImage();
 ui.copyrightText();
 

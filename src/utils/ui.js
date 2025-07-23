@@ -1,5 +1,5 @@
 import Image from "../images/alphabet.png";
-
+import Favicon from "../images/favicon.svg";
 const resultEl = document.getElementById("result");
 const loadingEl = document.getElementById("loading");
 const inputEL = document.getElementById("search");
@@ -8,6 +8,10 @@ const messageEl = document.getElementById("message");
 
 let timeLeft;
 let timer;
+
+function favicon() {
+  document.getElementById("favicon").setAttribute("href", Favicon);
+}
 
 function bgImage() {
   document.getElementById("bgImage").setAttribute("style", `background-image:url(${Image})`);
@@ -181,6 +185,7 @@ function copyrightText() {
 }
 
 export {
+  favicon,
   bgImage,
   showLoadingSmall,
   hideLoadingSmall,
