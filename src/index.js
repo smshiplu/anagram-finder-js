@@ -8,9 +8,15 @@ import getAIResponse from  "./utils/ai.js";
 const searchFormEl = document.getElementById("searchForm");
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector("header").classList.remove('hidden');
-  document.querySelector("main").classList.remove('hidden');
+  document.body.removeAttribute("style");
+  document.querySelector("header").removeAttribute("style");
+  document.querySelector("main").removeAttribute("style");
 });
+
+// window.onload = function() {
+//   document.querySelector("header").classList.remove('hidden');
+//   document.querySelector("main").classList.remove('hidden');
+// };
 
 searchFormEl.addEventListener("submit", async e => {
   e.preventDefault();
