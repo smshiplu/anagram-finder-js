@@ -8,8 +8,8 @@ import getAIResponse from  "./utils/ai.js";
 const searchFormEl = document.getElementById("searchForm");
 
 document.addEventListener('DOMContentLoaded', function() {
-  searchFormEl.classList.remove('hidden');
-  document.body.classList.remove('hidden');
+  document.querySelector("header").classList.remove('hidden');
+  document.querySelector("main").classList.remove('hidden');
 });
 
 searchFormEl.addEventListener("submit", async e => {

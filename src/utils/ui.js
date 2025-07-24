@@ -101,10 +101,14 @@ function displayResult(searchTerm, resultMap) {
 
   resultEl.classList.remove("hidden");
 
+  const mainWordValue = resultMap && resultMap.get(searchTerm).shift();  
+
+  resultMap.delete(searchTerm);
+
   document.getElementById("main-word").innerText = searchTerm;
   document.getElementById("anagram").innerText = resultMap.size > 1 ? `Anagrams(${resultMap.size})` : `Anagram(1)`;
   
-  const mainWordValue = resultMap && resultMap.get(searchTerm).shift();  
+
 
   document.getElementById("parent-accordion-collapse-body-1").firstElementChild.innerHTML = "";
   mainWordValue.meanings.forEach(item => {
