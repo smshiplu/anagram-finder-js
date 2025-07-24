@@ -28,13 +28,13 @@ searchFormEl.addEventListener("submit", async e => {
     const result = await getAIResponse(prompt);
 
     if( result === "Sorry") {
-      throw new Error("No Anagram found!");
+      throw new Error("No anagram found!");
     }
 
     const resultArr = [...new Set(result.split(","))].filter(item => item.trim() !== "");
     
     if(resultArr.length < 1 || (resultArr.length === 1 && resultArr.includes(searchTerm))) {
-      throw new Error("No Anagram found!");
+      throw new Error("No anagram found!");
     }
 
     if(!resultArr.includes(searchTerm)) {
@@ -47,7 +47,7 @@ searchFormEl.addEventListener("submit", async e => {
       await api.fetchAnagramMeaning(resultArr);
       
       if(api.anagramMap.size < 1 || api.anagramMap.size === 0) {
-        throw new Error("No Anagram found!");
+        throw new Error("No anagram found!");
       }
       
       ui.displayResult(searchTerm, api.anagramMap);
