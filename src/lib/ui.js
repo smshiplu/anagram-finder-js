@@ -186,7 +186,7 @@ function copyrightText() {
   const dt = new Date().toDateString().split(" ");
   const year = dt[dt.length - 1];
   
-  document.querySelector("#copyright-text").innerHTML = `© <span>${year}</span> Anagram Finder. All rights reserved.`;
+  document.querySelector("#copyright-text").innerHTML = `Anagram Finder | Created with 🧡 as a portfolio project.`;
 }
 
 export {

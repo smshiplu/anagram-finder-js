@@ -1,6 +1,6 @@
 import "./index.css";
 
-import * as ui from "./utils/ui.js";
+import * as ui from "./lib/ui.js";
 import * as api from "./utils/dictionary-api.js";
 import getAIResponse from  "./utils/ai.js";
 

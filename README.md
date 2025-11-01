@@ -41,10 +41,40 @@ Efficiently compiles and bundles assets using Webpack, ensuring fast load times 
 
 <br/>
 
+## 🎯 Installation Guide
+To run the Anagram Word Finder locally:
+### Step 1: Clone the repository
+```
+git clone https://github.com/smshiplu/anagram-finder-js.git
+cd anagram-finder-js
+```
+
+### Step 2: - Install dependencies
+```
+npm install
+```
+
+### Step 3: - Build the project using Webpack
+```
+npm run build
+```
+
+### Step 4: - - Start the development server (optional)
+```
+npm start
+```
+
+<br/>
+
 ## 👨‍💻 Developer Notes
 This app reflects a fusion of frontend technology and intelligent data sourcing. The use of functional programming principles ensures modularity and maintainability. Feel free to fork, clone, or contribute!
 
+<br/>
 
+## 📸 Screenshot
+![Anagram Finder App](./1.png "Screen Shoot")
+---
+![!Anagram Finder App](./2.png "Screen Shoot")
 
 
 
